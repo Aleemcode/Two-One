@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOV</title>
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.8/dist/alpine.js" defer></script>
+</head>
+
+
+</head>
+
+<body class="antialiased bg ">
+    <div class="page" x-data="{ isOpen : false }" @keydown.escape="isOpen = false">
+        <header class="bg page-header w-full shadow-lg mt-0 sticky top-0 z-50">
+            <nav class="px-4 lg:px-0 page-nav max-w-6xl mx-auto flex justify-between sm:items-center py-4 sm:py-8 ">
+                <a href="index.html"><img class="page-nav__logo w-40 " src="../images/logo.png " alt="Two-one-venture-logo "></a>
+                <div class="flex justify-center items-center">
+                    <ul class="hidden lg:flex text-base text-tov-secondary">
+                        <li class="page-nav__li mr-16 ">
+                            <a href="index.html" class="page-nav__item ">Home</a>
+                        </li>
+                        <li class="page-nav__li mr-16 ">
+                            <a href="about.html" class="page-nav__item ">About Us</a>
+                        </li>
+                        <li class="page-nav__li mr-16 ">
+                            <a href="process.html" class="page-nav__item ">Process</a>
+                        </li>
+                        <li class="page-nav__li mr-16 ">
+                            <a href="project.html" class="page-nav__item ">Gallery</a>
+                        </li>
+                        <li class="page-nav__li mr-16 ">
+                            <a href="logistic.html" class="page-nav__item ">Logistics</a>
+                        </li>
+                        <li class="page-nav__li ">
+                            <a href="#footer" class="page-nav__item ">Contact Us</a>
+                        </li>
+                    </ul>
+                    <div class="bg-primary w-full lg:hidden">
+                        <div x-on:click=" isOpen = !isOpen " class="w-8 h-8 flex bg-dark justify-center items-center border-2"><span class="iconify w-6 h-6 text-dark cursor-pointer" data-icon="fa-solid:bars" data-inline="false"></span></div>
+                    </div>
+                </div>
+            </nav>
+            <ul x-show="isOpen" @click.away="isOpen = false" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-100" x-transition:enter-end="opacity-100 transform translate-y-0" x-transition:leave="transition ease-in duration-300"
+                x-transition:leave-start="opacity-100 transform translate-y-0" x-transition:leave-end="opacity-0 transform translate-y-90" class="bg absolute transition-all text-base flex lg:hidden text-right flex-col pb-4 w-full">
+                <li class="page-nav__li mr-4 mb-2 ">
+                    <a href="index.html" class="page-nav__item ">Home</a>
+                </li>
+                <li class="page-nav__li mr-4 mb-2">
+                    <a href="about.html" class="page-nav__item ">About Us</a>
+                </li>
+                <li class="page-nav__li mr-4 mb-2 ">
+                    <a href="process.html" class="page-nav__item ">Process</a>
+                </li>
+                <li class="page-nav__li mr-4 mb-2">
+                    <a href="project.html" class="page-nav__item ">Gallery</a>
+                </li>
+                <li class="page-nav__li mr-4 mb-2">
+                    <a href="logistic.html" class="page-nav__item ">Logistics</a>
+                </li>
+                <li class="page-nav__li mr-4 ">
+                    <a href="#footer" class="page-nav__item ">Contact Us</a>
+                </li>
+            </ul>
+        </header>
+        <section class="z-10 process section relative h-64 pt-16 px-4 lg:px-0" id="process ">
+            <div class="max-w-6xl mx-auto text-center ">
+                <div class=" section__header ">
+                    <div class="section__icon text-center "></div>
+                    <h3 class="mt-3 ">TRANSPORTATION AND THE LOGISTICS OF AGGREGATES</h3>
+                </div>
+            </div>
+        </section>
+        <section class="max-w-6xl mx-auto process__body bg-white shadow-md grid lg:grid-cols-12 gap-8 z-30 rounded  px-8 py-8 lg:px-16 lg:py-12 ">
+            <div class="mb-8 lg:col-span-12">
+                <p class="process__body--content text-tov-text "> ONCE a client has decided on the particular materials (aggregates) required, mode of transportation will depend on the terrain of the location or site. </p>
+            </div>
+            <div class="mb-8 lg:col-span-6">
+                <h3 class="process__body--header text-xl font-display text-tov-secondary ">By Truck
+                </h3>
+                <p class="process__body--content mt-4 text-tov-text "> Transporting aggregate by road is simple and economical.<br/> <br/> At <strong>Two-One Venture</strong>, we prefer trucks and they must be covered with tarp (tarpaulin sheet cover) as this helps to reduce the possibility of chips of granite
+                    falling off the trucks while on the road for delivery. <br /> <br /> It also prevents the scattering of dust while trucks are on the road. Our trucks carrying capacities range from 15 to 30 tons in a single go. </p>
+            </div>
+            <div class="lg:col-span-6">
+                <img src="/images/truck-1.jpg" alt="">
+                <blockquote class="bg-tov-primary p-2 text-white"></blockquote>
+            </div>
+            <div class="grid lg:grid-cols-12 lg:col-span-12 gap-4">
+                <div class="mb-8 lg:col-span-6">
+                    <h3 class="process__body--header text-xl font-display text-tov-secondary ">By Rail
+                    </h3>
+                    <p class="process__body--content mt-4 text-tov-text "> Aggregates are also transported by rail and this method should be much more economical when compared to the truck transportation. Unfortunately, this mode of transportation is not popular in our part of the world.</p>
+                </div>
+                <div class="mb-8 lg:col-span-6">
+                    <h3 class="process__body--header text-xl font-display text-tov-secondary ">By Water
+                    </h3>
+                    <p class="process__body--content mt-4 text-tov-text "> Very large volume of aggregates can be carried more efficiently using water transportation. 150 tons at a go is possible. The use of hopper or flat deck barges comes handy. Some large barges have the capacity to carry both aggregates
+                        and the truck together, as a form of transitional carrier, across a body of water to islands where trucks and goods (aggregates) are delivered for onward final delivery to client's location.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="page-footer bg-tov-secondary py-16 px-4 lg:px-0 mt-12" id="footer">
+            <div class="max-w-6xl mx-auto grid lg:grid-cols-12 ">
+                <div class="page-footer__block col-span-4 ">
+                    <img src="../images/logo-invert.png " alt="TOV-Logo " class="page-footer__logo w-40 ">
+                    <p class="page-footer__content text-white mt-4 leading-8 ">Get In Touch With Us Today<br />
+                        <span class="text-tov-primary ">Give Us A Call:</span><br /> +234 703 489 4609 <br /> +234 809 310 3312
+                    </p>
+                </div>
+                <div class="page-footer__media col-span-4 mt-6 lg:mt-0 flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <span class="bg-tov-dark rounded-full text-white w-8 h-8 flex justify-center items-center"><i
+                                class="fab fa-twitter"></i></span>
+                        <div class="text-base text-white ml-4">@AdeyinkaAdedeh2</div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <span class="bg-tov-dark rounded-full text-white w-8 h-8 flex justify-center items-center"><i
+                                class="fab fa-instagram"></i></span>
+                        <div class="text-base text-white ml-4">Kahinbo1</div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <span class="bg-tov-dark rounded-full text-white w-8 h-8 flex justify-center items-center"><i
+                                class="fab fa-facebook-f"></i></span>
+                        <div class="text-base text-white ml-4">Adeyinka Adedehinbo</div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <span class="bg-tov-dark rounded-full text-white w-8 h-8 flex justify-center items-center"><i
+                                class="fas fa-envelope"></i></span>
+                        <div class="text-base text-white ml-4">Adeyinka Adedehinbo</div>
+                    </div>
+                </div>
+                <div class="page-footer__block col-span-4 mt-6 lg:mt-0 ">
+                    <div>
+                        <label class="block uppercase text-gray-700 text-xs font-bold mb-2 sr-only " for="email ">Email</label>
+                        <input type="email " class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-tov-text text-sm shadow focus:outline-none focus:shadow-outline w-full " placeholder="Email " style="transition:all .15s ease ">
+                    </div>
+                    <div class="mt-4 ">
+                        <label class="block uppercase text-gray-700 text-xs font-bold mb-2 sr-only " for="message ">Message</label>
+                        <textarea rows="4 " cols="80 " class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-tov-text text-sm shadow focus:outline-none focus:shadow-outline w-full " placeholder="Type a message... "></textarea>
+                    </div>
+                    <div class="mt-4 ">
+                        <button class="bg-tov-primary text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 " type="button " style="transition:all .15s ease ">Send Message</button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="/js/app.js "></script>
+</body>
+
+</html>

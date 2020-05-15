@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.8/dist/alpine.js" defer></script>
+</head>
+
+
+</head>
+
+<body class="antialiased bg ">
+    <div class="page" x-data="{ isOpen : false }" @keydown.escape="isOpen = false">
+        <header class="bg page-header w-full shadow-lg mt-0 sticky top-0 z-50">
+            <nav class="px-4 lg:px-0 page-nav max-w-6xl mx-auto flex justify-between sm:items-center py-4 sm:py-8 ">
+                <a href="# "><img class="page-nav__logo w-40 " src="../images/logo.png " alt="Two-one-venture-logo "></a>
+                <div class="flex justify-center items-center">
+                    <ul class="hidden lg:flex text-base text-tov-secondary">
+                        <li class="page-nav__li mr-16 ">
+                            <a href="index.html" class="page-nav__item ">Home</a>
+                        </li>
+                        <li class="page-nav__li mr-16 ">
+                            <a href="about.html" class="page-nav__item ">About Us</a>
+                        </li>
+                        <li class="page-nav__li mr-16 ">
+                            <a href="/layouts/process.html" class="page-nav__item ">Process</a>
+                        </li>
+                        <li class="page-nav__li mr-16 ">
+                            <a href="project.html" class="page-nav__item ">Gallery</a>
+                        </li>
+                        <li class="page-nav__li mr-16 ">
+                            <a href="logistic.html" class="page-nav__item ">Logistics</a>
+                        </li>
+                        <li class="page-nav__li ">
+                            <a href="#footer" class="page-nav__item ">Contact Us</a>
+                        </li>
+                    </ul>
+                    <div class="bg-primary w-full lg:hidden">
+                        <div x-on:click=" isOpen = !isOpen " class="w-8 h-8 flex bg-dark justify-center items-center border-2"><span class="iconify w-6 h-6 text-dark cursor-pointer" data-icon="fa-solid:bars" data-inline="false"></span></div>
+                    </div>
+                </div>
+            </nav>
+            <ul x-show="isOpen" @click.away="isOpen = false" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-100" x-transition:enter-end="opacity-100 transform translate-y-0" x-transition:leave="transition ease-in duration-300"
+                x-transition:leave-start="opacity-100 transform translate-y-0" x-transition:leave-end="opacity-0 transform translate-y-90" class="bg absolute transition-all text-base flex lg:hidden text-right flex-col pb-4 w-full">
+                <li class="page-nav__li mr-4 mb-2 ">
+                    <a href="index.html" class="page-nav__item ">Home</a>
+                </li>
+                <li class="page-nav__li mr-4 mb-2">
+                    <a href="about.html" class="page-nav__item ">About Us</a>
+                </li>
+                <li class="page-nav__li mr-4 mb-2 ">
+                    <a href="process.html" class="page-nav__item ">Process</a>
+                </li>
+                <li class="page-nav__li mr-4 mb-2">
+                    <a href="project.html" class="page-nav__item ">Gallery</a>
+                </li>
+                <li class="page-nav__li mr-4 mb-2">
+                    <a href="logistic.html" class="page-nav__item ">Logistics</a>
+                </li>
+                <li class="page-nav__li mr-4 ">
+                    <a href="#footer" class="page-nav__item ">Contact Us</a>
+                </li>
+            </ul>
+        </header>
+        <section class="hero section py-16 md:py-32 lg:py-48  px-4 lg:px-0 md:py-32">
+            <div class="max-w-6xl mx-auto">
+                <h1 class="hero__title text-white">Let us handle your<br /> construction works.</h1>
+                <p class="hero__title--sub text-white mt-4 mb-10">We provide complete aggregate solutions that suite your construction plan</p>
+                <butto><a class="hero__cta btn-cta hover:shadow-lg outline-none focus:outline-none " href="#project">View
+                        Projects</a></button>
+            </div>
+        </section>
+        <section class="about section w-full py-16 px-4 lg:px-0" id="aboutus ">
+            <div class="grid lg:grid-cols-12 max-w-6xl mx-auto">
+                <div class="col-span-6">
+                    <h3 class="about__header font-display text-xl lg:text-4xl leading-10 text-tov-secondary ">We’re expert at making good aggregate better solution since 2010.</h3>
+                    <p class="about__content text-tov-text mt-6 ">Two-One Venture supplies Aggregates based on specification mostly across the South-West states of Nigeria, though, our clients in the South West have seen reasons to take us outside the region to as far as the South-South states (particularly
+                        Calabar/Port-Harcourt) whenever they have construction projects in the area.
+                    </p>
+                    <button class="about__cta btn-cta mt-8 hover:shadow-lg outline-none focus:outline-none">More About
+                        Us</button>
+                </div>
+                <div class="col-span-6 lg:ml-16 flex flex-col mt-12 lg:mt-0">
+                    <div class="about__grid2--body flex">
+                        <div class="about__grid2--icon ">
+                            <i class=" fas fa-layer-group fa-4x "></i>
+                        </div>
+                        <div class="about__grid2--content ">
+                            <h3 class="about__grid2--header font-display text-xl text-tov-secondary ">Professional Approach
+                            </h3>
+                            <p class="about__grid2--subheader mt-4 text-tov-text ">Leo dolor malesuada nibh nisl lectus egestas mollis. Leo dolor malesuada nibh nisl lectus egestas mollis.</p>
+                        </div>
+                    </div>
+                    <div class="about__grid2--body flex mt-8 ">
+                        <div class="about__grid2--icon "><i class="fas fa-cookie fa-4x "></i></div>
+                        <div class="about__grid2--content ">
+                            <h3 class="about__grid2--header font-display text-xl text-tov-secondary ">Quality Aggregate
+                            </h3>
+                            <p class="about__grid2--subheader mt-4 text-tov-text ">Leo dolor malesuada nibh nisl lectus egestas mollis. Leo dolor malesuada nibh nisl lectus egestas mollis.</p>
+                        </div>
+                    </div>
+                    <div class="about__grid2--body flex mt-8 ">
+                        <div class="about__grid2--icon "><i class=" fas fa-bus fa-4x "></i></div>
+                        <div class="about__grid2--content ">
+                            <h3 class="about__grid2--header font-display text-xl text-tov-secondary ">Fast Transportation and Logistics</h3>
+                            <p class="about__grid2--subheader mt-4 text-tov-text ">Leo dolor malesuada nibh nisl lectus egestas mollis. Leo dolor malesuada nibh nisl lectus egestas mollis.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="process section relative h-64 pt-16 px-4 lg:px-0 mb-56 " id="process ">
+            <div class="max-w-6xl mx-auto text-center ">
+                <div class=" section__header text-xl font-display text-white mt-2 flex flex-col justify-center items-center uppercase ">
+                    <div class="section__icon text-center "></div>
+                    <h3 class="mt-3 ">Our Process</h3>
+                </div>
+                <div class="max-w-6xl absolute process__body bg-white shadow-md flex flex-col mt-8 rounded mr-4 lg:mr-0 px-8 py-8 lg:px-16 lg:py-12 ">
+                    <h3 class="process__body--header col-span-12 text-xl font-display text-tov-secondary ">What is Aggregate?
+                    </h3>
+                    <p class="process__body--content col-span-12 mt-8 text-tov-text ">Construction aggregate or simply "aggregate " is a broad category of coarse to medium grained particulate material used in construction including; sand, gravel, granite, crushed stone, etc. Aggregate is the most mined materials in
+                        the world.
+                    </p>
+                    <button class="process__cta mx-auto "> <a
+                            class="block btn-cta hover:shadow-lg outline-none focus:outline-none"
+                            href="process.html">Learn
+                            more</a> </button>
+                </div>
+            </div>
+        </section>
+        <section class="project section py-24 lg:py-16 px-4 lg:px-0 " id="project">
+            <div class=" section__header text-xl font-display text-white mt-2 flex flex-col justify-center items-center uppercase ">
+                <div class="section__icon text-center "></div>
+                <h3 class="mt-3 text-tov-secondary ">Our Gallery</h3>
+            </div>
+            <div class="project__body grid lg:grid-cols-12 gap-6 mt-8 max-w-6xl mx-auto ">
+                <div class="project__body--image-block relative col-span-4 align-stretch">
+                    <img src="../images/project-1.png " alt="site-image " class="project__image ">
+                </div>
+                <div class="project__body--image-block relative col-span-4 ">
+                    <img src="../images/project-2.png " alt="site-image " class="project__image ">
+                </div>
+                <div class="project__body--image-block relative col-span-4 ">
+                    <img src="../images/project-3.png " alt="site-image " class="project__image ">
+                </div>
+            </div>
+            <div class="max-w-6xl mx-auto flex">
+                <button class="process__cta mx-auto "> <a
+                        class="block btn-cta hover:shadow-lg outline-none focus:outline-none" href="project.html">View
+                        more</a> </button>
+            </div>
+        </section>
+        <section class="logistic section py-16 px-4 lg:px-0 " id="logistic ">
+            <div class="max-w-6xl mx-auto ">
+                <div class=" section__header text-xl font-display text-white mt-2 flex flex-col justify-center items-center uppercase ">
+                    <div class="section__icon text-center "></div>
+                    <h3 class="mt-3 ">Transportation & Logistics</h3>
+                </div>
+                <div class="logisctic__body mt-4 ">
+                    <p class="logisctic__body--content text-center text-white ">TWO-ONE Venture covers all modes of transportation depending on the terrain of the location or site
+                    </p>
+                </div>
+                <div class="logistic__icon flex justify-center text-white mt-8 ">
+                    <div class="logistic__icon--1 mr-24 flex flex-col justify-center items-center">
+                        <i class="text-tov-primary fas fa-truck fa-4x "></i>
+                        <p class="logistic__icon--text mt-3 ">Truck</p>
+                    </div>
+                    <div class="logistic__icon--1 mr-24 flex flex-col justify-center items-center">
+                        <i class="text-tov-primary fas fa-train fa-4x "></i>
+                        <p class="logistic__icon--text mt-3 ">Rail</p>
+                    </div>
+                    <div class="logistic__icon--1 flex flex-col justify-center items-center">
+                        <i class="text-tov-primary fas fa-ban fa-4x "></i>
+                        <p class="logistic__icon--text mt-3 ">Water</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ref section py-16 " id="ref ">
+            <div class="max-w-6xl mx-auto ">
+                <div class=" section__header text-xl font-display text-white mt-2 flex flex-col justify-center items-center uppercase ">
+                    <div class="section__icon text-center "></div>
+                    <h3 class="mt-3 text-gray-800 ">Our References</h3>
+                </div>
+                <div class="ref__body mt-10 flex flex-col lg:flex-row lg:justify-between justify-center items-center text-xl font-display text-tov-text uppercase ">
+                    <h3 class="ref__body--1 ">SIMON Engineering</h3>
+                    <h3 class="ref__body--1 mt-3 lg:mt-0 text-center ">PCA- America's Cement Manufacturers</h3>
+                    <h3 class="ref__body--1 mt-3 lg:mt-0 ">Waste Disposal Hub</h3>
+                </div>
+            </div>
+        </section>
+        <footer class="page-footer bg-tov-secondary  py-16 px-4 lg:px-0 " id="footer">
+            <div class="max-w-6xl mx-auto grid lg:grid-cols-12 ">
+                <div class="page-footer__block col-span-4 ">
+                    <img src="../images/logo-invert.png " alt="TOV-Logo " class="page-footer__logo w-40 ">
+                    <p class="page-footer__content text-white mt-4 leading-8 ">Get In Touch With Us Today<br />
+                        <span class="text-tov-primary ">Give Us A Call:</span><br /> +234 703 489 4609 <br /> +234 809 310 3312
+                    </p>
+                </div>
+                <div class="page-footer__media col-span-4 mt-6 lg:mt-0 flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <span class="bg-tov-dark rounded-full  text-white w-8 h-8 flex justify-center items-center"><i
+                                class="fab fa-twitter"></i></span>
+                        <div class="text-base text-white ml-4">@AdeyinkaAdedeh2</div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <span class="bg-tov-dark rounded-full text-white w-8 h-8 flex justify-center items-center"><i
+                                class="fab fa-instagram"></i></span>
+                        <div class="text-base text-white ml-4">Kahinbo1</div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <span class="bg-tov-dark rounded-full  text-white w-8 h-8 flex justify-center items-center"><i
+                                class="fab fa-facebook-f"></i></span>
+                        <div class="text-base text-white ml-4">Adeyinka Adedehinbo</div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <span class="bg-tov-dark rounded-full text-white w-8 h-8 flex justify-center items-center"><i
+                                class="fas fa-envelope"></i></span>
+                        <div class="text-base text-white ml-4">Adeyinka Adedehinbo</div>
+                    </div>
+                </div>
+                <div class="page-footer__block col-span-4 mt-6 lg:mt-0 ">
+                    <div>
+                        <label class="block uppercase text-gray-700 text-xs font-bold mb-2 sr-only " for="email ">Email</label>
+                        <input type="email " class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-tov-text text-sm shadow focus:outline-none focus:shadow-outline w-full " placeholder="Email " style="transition:all .15s ease ">
+                    </div>
+                    <div class="mt-4 ">
+                        <label class="block uppercase text-gray-700 text-xs font-bold mb-2 sr-only " for="message ">Message</label>
+                        <textarea rows="4 " cols="80 " class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-tov-text text-sm shadow focus:outline-none focus:shadow-outline w-full " placeholder="Type a message... "></textarea>
+                    </div>
+                    <div class="mt-4 ">
+                        <button class="bg-tov-primary text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 " type="button " style="transition:all .15s ease ">Send Message</button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="/js/app.js "></script>
+</body>
+
+</html>
