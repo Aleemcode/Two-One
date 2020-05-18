@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOV</title>
-    <link rel="stylesheet" href="/css/tailwind.css">
-    <link rel="stylesheet" href="/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <script rel="preload" as="script" src="https://code.iconify.design/1/1.0.6/iconify.min.js">
+    </script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.8/dist/alpine.js" defer></script>
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 
@@ -80,24 +81,22 @@
         </section>
         <section class="max-w-6xl mx-auto process__body bg-white shadow-md grid lg:grid-cols-12 gap-8 z-30 rounded  px-8 py-8 lg:px-16 lg:py-12 ">
             <div class="mb-8 lg:col-span-12">
-                <p class="process__body--content text-tov-text "> ONCE a client has decided on the particular materials (aggregates) required, mode of transportation will depend on the terrain of the location or site. </p>
+                <p class="process__body--content text-tov-text "> ONCE a client has decided on the particular materials (aggregates) required, mode of transportation will depend on the terrain of the location or site.
+                </p>
             </div>
-            <div class="mb-8 lg:col-span-6">
+            <div class="mb-8 lg:col-span-6 ">
                 <h3 class="process__body--header text-xl font-display text-tov-secondary ">By Truck
                 </h3>
-                <p class="process__body--content mt-4 text-tov-text "> Transporting aggregate by road is simple and economical.<br/> <br/> At <strong>Two-One Venture</strong>, we prefer trucks and they must be covered with tarp (tarpaulin sheet cover) as this helps to reduce the possibility of chips of granite
-                    falling off the trucks while on the road for delivery. <br /> <br /> It also prevents the scattering of dust while trucks are on the road. Our trucks carrying capacities range from 15 to 30 tons in a single go. </p>
-            </div>
-            <div class="lg:col-span-6">
-                <img src="/images/truck-1.jpg" alt="">
-                <blockquote class="bg-tov-primary p-2 text-white"></blockquote>
-            </div>
-            <div class="grid lg:grid-cols-12 lg:col-span-12 gap-4">
-                <div class="mb-8 lg:col-span-6">
+                <p class="process__body--content mt-4 text-tov-text "> Transporting aggregate by road is simple and economical.
+                    <br /> <br /> At <strong>Two-One Venture</strong>, we prefer trucks and they must be covered with tarp (tarpaulin sheet cover) as this helps to reduce the possibility of chips of granite falling off the trucks while on the road for
+                    delivery. <br /> <br /> It also prevents the scattering of dust while trucks are on the road. Our trucks carrying capacities range from 15 to 30 tons in a single go. </p>
+
+                <div class="mb-8 lg:col-span-6 mt-8">
                     <h3 class="process__body--header text-xl font-display text-tov-secondary ">By Rail
                     </h3>
                     <p class="process__body--content mt-4 text-tov-text "> Aggregates are also transported by rail and this method should be much more economical when compared to the truck transportation. Unfortunately, this mode of transportation is not popular in our part of the world.</p>
                 </div>
+
                 <div class="mb-8 lg:col-span-6">
                     <h3 class="process__body--header text-xl font-display text-tov-secondary ">By Water
                     </h3>
@@ -106,6 +105,13 @@
                     </p>
                 </div>
             </div>
+            <div class="lg:col-span-6">
+                <img src="/images/truck-1.jpg" alt="truck-img">
+                <img class="mt-4" src="/images/tipper-1.png" alt="tipper-img">
+                <img class="mt-4" src="/images/tipper-2.png" alt="tiipper-img">
+            </div>
+
+
         </section>
 
         <footer class="page-footer bg-tov-secondary py-16 px-4 lg:px-0 mt-12" id="footer">
